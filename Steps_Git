@@ -1,0 +1,20 @@
+git init OR git clone https://github.com/FernandaVGF/TAGs_PS_GRIS_2020
+
+>> Add files in the directory created above.
+
+>> Before the next step, go to the directory using terminal.
+
+git add . OR git add name_file.extension
+
+git commit -m "Name of the update"
+
+git push origin master
+
+The end!
+
+>> https://github.com/FernandaVGF/TAGs_PS_GRIS_2020
+
+
+
+
+
