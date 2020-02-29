@@ -4,7 +4,7 @@ git init OR git clone https://github.com/FernandaVGF/TAGs_PS_GRIS_2020
 
 >> Before the next step, go to the directory using terminal.
 
-git add . OR git add name_file.extension
+git add . OR git add name_file.extension OR git add name_folder/*
 
 git commit -m "Name of the update"
 
