@@ -5,7 +5,7 @@ Nome: Fernanda Veiga Gomes da Fonseca
 TAG - Banco de Dados I - Entrega: 29/02/2020
 '''
 
-	O objetivo da TAG foi criar um banco de dados referente ao processo seletivo do GRIS. Antes de serem escritos os comandos SQL de criação do banco e das tabelas, optou-se por montar um diagrama do banco (ver arquivo 'TAG_BancodeDados1_FernandaFonseca_Diagrama.png'). Para tal, foi utilizado o programa StarUML e o arquivo gerado tem como nome 'DER.mdj'.
+	O objetivo da TAG foi criar um banco de dados referente ao processo seletivo do GRIS. Antes de serem escritos os comandos SQL de criação do banco e das tabelas, optou-se por montar um diagrama do banco (ver arquivo 'TAG_BancodeDados1_FernandaFonseca_Diagrama.png'). Para tal, foi utilizado o programa StarUML e o arquivo gerado tem como nome 'Diagrama.mdj'.
 
 	As primeiras entidades pensadas foram 'Pessoa', 'Palestra' e 'Avaliacao'. Em um processo seletivo, deve haver pessoas envolvidas, bem como avaliações individuais de algumas delas para determinar se serão selecionadas. No caso específico do GRIS, foram ministradas diversas palestras ao longo de três semanas, logo uma entidade representativa das mesmas foi incluída no banco.
 
