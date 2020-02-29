@@ -1,0 +1,108 @@
+fernanda@folff:~$ mysql -u fernanda -p
+
+mysql> CREATE DATABASE PS_GRIS_2020;
+mysql> USE PS_GRIS_2020;
+
+mysql> CREATE TABLE Pessoa (
+    -> Cd_Pessoa int (4),
+    -> Nm_Nome varchar (50),
+    -> Nu_DRE int (4),
+    -> Nm_Curso varchar (50),
+    -> PRIMARY KEY (Cd_Pessoa)
+    -> );
+
+mysql> CREATE TABLE Tag (
+    -> Cd_Tag int (4),
+    -> Dt_Prazo date,
+    -> PRIMARY KEY (Cd_Tag)
+    -> );
+
+mysql> CREATE TABLE Candidato (
+    -> Cd_Candidato int (4),
+    -> Nu_Aprovado tinyint (1),
+    -> PRIMARY KEY (Cd_Candidato)
+    -> );
+
+mysql> CREATE TABLE Membro (
+    -> Cd_Membro int (4),
+    -> PRIMARY KEY (Cd_Membro)
+    -> );
+
+mysql> CREATE TABLE Ouvinte (
+    -> Cd_Ouvinte int (4),
+    -> PRIMARY KEY (Cd_Ouvinte)
+    -> );
+
+mysql> CREATE TABLE Palestra (
+    -> Cd_Palestra int (4),
+    -> Dt_Palestra date,
+    -> PRIMARY KEY (Cd_Palestra)
+    -> );
+
+mysql> ALTER TABLE Palestra
+    -> ADD Nm_Assunto varchar (50);
+
+mysql> CREATE TABLE Avaliacao (
+    -> Cd_Avaliacao int (4),
+    -> PRIMARY KEY (Cd_Avaliacao)
+    -> );
+
+mysql> ALTER TABLE Candidato
+    -> ADD Cd_Pessoa int (4),
+    -> ADD Cd_Avaliacao int (4),
+    -> ADD Cd_Palestra int (4);
+
+mysql> ALTER TABLE Candidato
+    -> ADD CONSTRAINT FK_Cd_Pessoa_Candidato
+    -> FOREIGN KEY (Cd_Pessoa) REFERENCES Pessoa (Cd_Pessoa);
+
+mysql> ALTER TABLE Candidato
+    -> ADD CONSTRAINT FK_Cd_Avaliacao_Candidato
+    -> FOREIGN KEY (Cd_Avaliacao) REFERENCES Avaliacao (Cd_Avaliacao);
+
+mysql> ALTER TABLE Candidato
+    -> ADD CONSTRAINT FK_Cd_Palestra_Candidato
+    -> FOREIGN KEY (Cd_Palestra) REFERENCES Palestra (Cd_Palestra);
+
+mysql> ALTER TABLE Membro
+    -> ADD Cd_Pessoa int (4),
+    -> ADD Cd_Palestra int (4);
+
+mysql> ALTER TABLE Membro
+    -> ADD CONSTRAINT FK_Cd_Pessoa_Membro 
+    -> FOREIGN KEY (Cd_Pessoa) REFERENCES Pessoa (Cd_Pessoa);
+
+mysql> ALTER TABLE Membro
+    -> ADD CONSTRAINT FK_Cd_Palestra_Membro 
+    -> FOREIGN KEY (Cd_Palestra) REFERENCES Palestra (Cd_Palestra);
+
+mysql> ALTER TABLE Ouvinte
+    -> ADD Cd_Pessoa int (4),
+    -> ADD Cd_Palestra int (4);
+
+mysql> ALTER TABLE Ouvinte
+    -> ADD CONSTRAINT FK_Cd_Pessoa_Ouvinte
+    -> FOREIGN KEY (Cd_Pessoa) REFERENCES Pessoa (Cd_Pessoa);
+
+mysql> ALTER TABLE Ouvinte
+    -> ADD CONSTRAINT FK_Cd_Palestra_Ouvinte
+    -> FOREIGN KEY (Cd_Palestra) REFERENCES Palestra (Cd_Palestra);
+
+mysql> ALTER TABLE Palestra
+    -> ADD Cd_Tag int (4);
+
+mysql> ALTER TABLE Palestra
+    -> ADD CONSTRAINT FK_Cd_Tag_Palestra
+    -> FOREIGN KEY (Cd_Tag) REFERENCES Tag (Cd_Tag);
+
+mysql> ALTER TABLE Avaliacao
+    -> ADD Cd_Tag int (4),
+    -> ADD Cd_Membro int (4);
+
+mysql> ALTER TABLE Avaliacao 
+    -> ADD CONSTRAINT FK_Cd_Tag_Avaliacao
+    -> FOREIGN KEY (Cd_Tag) REFERENCES Tag (Cd_Tag);
+
+mysql> ALTER TABLE Avaliacao
+    -> ADD CONSTRAINT FK_Cd_Membro_Avaliacao
+    -> FOREIGN KEY (Cd_Membro) REFERENCES Membro (Cd_Membro);

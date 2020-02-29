@@ -1,0 +1,24 @@
+'''
+PROCESSO SELETIVO - Grupo de Resposta a Incidentes de Segurança
+
+Nome: Fernanda Veiga Gomes da Fonseca
+TAG - Banco de Dados 1 - Entrega: 29/02/2020
+'''
+
+	O objetivo da TAG foi criar um banco de dados referente ao processo seletivo do GRIS. Antes de serem escritos os comandos SQL de criação do banco e das tabelas, optou-se por montar um diagrama do banco (ver arquivo 'TAG_BancodeDados1_FernandaFonseca_Diagrama.png'). Para tal, foi utilizado o programa StarUML e o arquivo gerado tem como nome 'DER.mdj'.
+
+	As primeiras entidades pensadas foram 'Pessoa', 'Palestra' e 'Avaliacao'. Em um processo seletivo, deve haver pessoas envolvidas, bem como avaliações individuais de algumas delas para determinar se serão selecionadas. No caso específico do GRIS, foram ministradas diversas palestras ao longo de três semanas, logo uma entidade representativa das mesmas foi incluída no banco.
+
+	Em seguida, as pessoas participantes do processo seletivo foram divididas em três categorias (candidatos, membros e ouvintes), levando à criação de mais três entidades ('Candidato', 'Membro' e 'Ouvinte'). Elas possuem funções diferentes, porém guardam características em comum (nome, DRE e curso). Assim, as características comuns foram definidas como atributos da entidade 'Pessoa', na qual também foi definido um código único 'Cd_Pessoa', herdado como chave estrangeira pelas três outras entidades mencionadas.
+
+	Conforme dito anteriormente, as entidades 'Candidato', 'Membro' e 'Ouvinte' possuem funções diferentes. Dessa forma, elas, além de possuírem uma chave estrangeira referente à entidade 'Pessoa', também podem ter associados outros atributos. No caso, apenas a entidade 'Candidato' apresenta um atributo próprio ('Nu_Aprovado') que define se o candidato foi aprovado (0 = Não ou 1 = Sim).
+
+	Na a entidade 'Palestra', além de uma chave primária 'Cd_Palestra', foram definidos os atributos 'Dt_Palestra' e 'Nm_Assunto', relacionados à data em que a palestra foi ministrada e o tema da mesma, respectivamente. Ao final de algumas palestras foram passados exercícios (TAGs), levando, pois, à criação de uma nova entidade: 'Tag'. O único atributo dessa entidade é 'Dt_Prazo', que define a data de entrega de uma determinada TAG. Sua chave primária foi herdada pela entidade 'Palestra', pois cada palestra pode possuir nenhuma, uma ou várias TAGs.
+
+	O GRIS possui diversos membros, porém nem todos ministraram palestras, apesar de terem participado do processo seletivo. Por isso, a entidade 'Membro' herda a chave 'Cd_Palestra' podendo dar nenhuma, uma ou várias palestras (em cada palestra também podem participar um ou mais membros).
+
+	Definiu-se para a entidade 'Avaliacao' uma chave primária 'Cd_Avaliacao' e um atributo 'Nu_Nota', o qual define uma nota dada na avaliação. Foram herdadas as chaves 'Cd_Tag' e 'Cd_Membro', porque uma avaliação é feita com relação a uma TAG passada e pode ser feita por um ou mais membros. Um candidato realiza uma ou mais TAGs, que são avaliadas indivudualmente, por isso a entidade 'Candidato' herda a chave 'Cd_Avaliacao', com uma relação 1:n.
+
+	Como foi considerado relevante indicar o comparecimento de candidatos e ouvintes nas palestras, as entidades 'Candidato' e 'Ouvinte' herdam a chave 'Cd_Palestra' (os candidatos podem assistir a nenhuma, uma ou várias palestras, enquanto os ouvintes, a uma ou várias, porque, se não assistirem a pelo menos uma, não há sentido em constarem no banco). É importante ressaltar que as relações das entidades 'Candidato' e 'Ouvinte' com a entidade 'Palestra' (comparecer) é diferente da relação da entidade 'Membro' com a mesma (ministrar).
+
+	Por fim, utilizando o terminal, foram escritos os comandos SQL, criando-se o banco e suas tabelas (ver arquivos 'TAG_BancodeDados1_FernandaFonseca_Script.txt' e 'TAG_BancodeDados1_FernandaFonseca_Banco.png').
