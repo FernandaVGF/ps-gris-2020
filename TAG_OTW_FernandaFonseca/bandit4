@@ -1,0 +1,5 @@
+A lógica utilizada nesse desafio foi semelhante à logica descrita em "bandit1.txt".
+
+Entretanto, para que os arquivos não fossem abertos um por um, utilizou-se "cat ./*", podendo visualizar os conteúdos de todos os arquivos.
+
+Como há um número pequeno de arquivos, o conteúdo ficou sequencial, porém foi possível identificar a senha "koReBOKuIDDepwhWk7jZC0RTdopnAYKh" para o próximo desafio.

@@ -1,0 +1,5 @@
+Usando o comando "ls", descobriu-se o arquivo "spaces in this filename".
+
+O comando "cat spaces in this filename" não é reconhecido. Por isso, escreveu-se "cat s" e em seguida usou-se a tecla TAB para autocompletar o nome (os espaços devem ser substituídos por "\ ").
+
+Assim, a senha "UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK" para o próximo nível foi descoberta.

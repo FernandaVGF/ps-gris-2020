@@ -1,0 +1,14 @@
+# Bandit0
+Como é necessário se conectar ao servidor bandit.labs.overthewire.org, o comando ssh deve ser usado. 
+
+Utilizando "man ssh", é possível descobrir que para que a conexão seja feita com um login em uma porta, o comando a ser usado deve ser "ssh bandit.labs.overthewire.org -l bandit0 -p 2220".
+
+Dessa forma, é usada a senha "bandit0", informada pelo enunciado.
+
+
+# Bandit0 -> Bandit1
+Primeiro, foi utilizado o comando "ls" para descobrir os arquivos e apenas foi encontrado "readme".
+
+Em seguida, para visualizar o conteúdo do arquivo, foi usado "cat readme".
+
+Assim, descobriu-se a senha "boJ9jbbUNNfktd78OOpsqOltutMc3MY1", usada após a conexão com o mesmo servidor e a mesma porta, porém com outro usuário ("bandit1").

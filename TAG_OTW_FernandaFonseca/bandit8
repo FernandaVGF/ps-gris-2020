@@ -1,0 +1,5 @@
+Usando "ls", foi descoberto o arquivo "data.txt". Como a senha é uma linha que aparece uma única vez, fez sentido entender o comando "uniq", pois poderia ser útil no sentindo dessa descoberta.
+
+Assim, cogitou-se usar "cat data.txt | uniq -c | grep "1 "", porém "uniq" realiza uma comparação de cada linha com a anterior. Por isso, usou-se "cat data.txt | sort | uniq -c | grep "1 "" para que essa análise fizesse sentido.
+
+Por fim, obteve-se a senha "UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR".

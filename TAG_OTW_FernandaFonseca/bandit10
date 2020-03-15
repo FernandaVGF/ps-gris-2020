@@ -1,0 +1,5 @@
+Uma vez que o enunciado informa que o arquivo está codificado na base 64, o comando "base64" pareceu ser a resposta.
+
+Usando "man base64", descobriu-se que o arquivo é decodificado através de "base64 -d".
+
+Assim, usando "base64 -d data.txt", encontrou-se a senha "IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR".

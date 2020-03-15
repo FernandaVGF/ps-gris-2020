@@ -1,0 +1,7 @@
+Foi usado o comando "ls", seguido de "cd inhere". Usando novamente "ls", foram identificados diversos diretórios.
+
+Como existe a especificação do tamanho do arquivo (1033 bytes), pensou-se que o comando "du" seria útil. Para isso, ele foi estudado através de "man du".
+
+Optou-se pelo comando "du -a -b" de maneira a listar todos os arquivos de todos os diretórios com seus respectivos tamanhos em bytes.
+
+Como eram muitas linhas, em seguida usou-se "du -a -b | grep 1033" e a senha "DXjZPULLxYr17uwoI01bNLQbtFemEgo7" foi encontrada através de "cat .file2" após "cd maybehere07".

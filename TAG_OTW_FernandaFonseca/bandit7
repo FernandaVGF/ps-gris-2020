@@ -1,0 +1,3 @@
+Após o uso do comando "ls", foi usado "cat data.txt", porém o arquivo é muito grande.
+
+Para facilitar a busca, utilizou-se "cat data.txt | grep millionth", encontrando-se a senha "cvX2JJa4CFALtqS87jk27qwqGhBM9plV".

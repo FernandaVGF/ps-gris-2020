@@ -1,0 +1,7 @@
+Como a senha está localizada em algum lugar no servidor, foi feita uma busca usando o comando "find /".
+
+Entretanto, foram utilizadas opções para listar somente arquivos possuídos por bandit7, pelo grupo bandit6 e de tamanho 33 bytes: "find / -user bandit7 -group bandit6 -size 33c" (cada uma das opções foram previamente identificadas usando "man find").
+
+Então, em uma varredura visual, foi localizado um arquivo aberto com "cat /var/lib/dpkg/info/bandit7.password", decobrindo-se a senha "HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs".
+
+

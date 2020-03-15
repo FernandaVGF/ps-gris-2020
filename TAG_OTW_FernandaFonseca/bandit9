@@ -1,0 +1,5 @@
+O primeiro comando utilizado foi "cat data.txt", porém não foi possível realizar uma análise visual do retorno.
+
+Usando "cat data.txt | grep =", foi retornado "Binary file (standard input) matches". Por já ter função conhecida, optou-se pelo comando "strings" para ser possível ler o conteúdo do arquivo binário.
+
+Como é dito que a senha se encontra após vários caracteres "=", usou-se "strings data.txt | grep =" e a senha "truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk" foi descoberta.

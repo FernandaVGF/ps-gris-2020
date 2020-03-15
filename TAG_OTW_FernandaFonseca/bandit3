@@ -1,0 +1,7 @@
+Após identificar o diretório "inhere" usando o comando "ls", utilizou-se "cd inhere".
+
+Como o arquivo em que a senha se encontra não pode ser encontrado usando "ls" novamente, decidiu-se investigar o que o comando "ls" pode fazer através de "man ls".
+
+Dessa forma, descobriu-se que usando "ls -a" são listados todos os arquivos, inclusive os que possuem nome com "."no início.
+
+A senha "pIwrPrtPN36QITSp3EQaw936yaFoFgAB" foi usada para o próximo nível.
